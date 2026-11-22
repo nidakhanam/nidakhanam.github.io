@@ -64,7 +64,7 @@ const PROJECTS = [
    ========================================================================== */
 const TERMINAL_LINES = [
   { type: "prompt", text: "> whoami" },
-  { type: "out", text: "Nida Khanam — Software Developer 💻🌸" },
+  { type: "out", text: "Nida Khanam — Python Developer + GenAI 💻🌸" },
   { type: "prompt", text: "> cat skills.txt" },
   { type: "out", text: "Python · Django · GenAI · RAG · Agents · Kafka" },
   { type: "prompt", text: "> echo $CURRENT_FOCUS" },
