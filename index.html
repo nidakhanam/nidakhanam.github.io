@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nida Khanam · Software Developer · Backend &amp; GenAI</title>
+  <meta name="description" content="Nida Khanam is a Software Developer in Hyderabad building scalable Python/Django backends, event-driven pipelines and GenAI / agentic AI systems (RAG, LLM agents, tool calling)." />
+  <meta name="author" content="Nida Khanam" />
+  <meta name="theme-color" content="#FFF8F5" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#1E1424" media="(prefers-color-scheme: dark)" />
+
+  <!-- Open Graph / social preview (update og:url after you publish) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Nida Khanam · Software Developer · Backend & GenAI" />
+  <meta property="og:description" content="I build scalable backends and I'm now building AI agents that actually do things." />
+  <meta property="og:url" content="https://nidakhanam.github.io/" />
+  <meta property="og:image" content="https://nidakhanam.github.io/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Nida Khanam — Software Developer, Backend & GenAI" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nida Khanam · Software Developer · Backend & GenAI" />
+  <meta name="twitter:description" content="I build scalable backends and I'm now building AI agents that actually do things." />
+  <meta name="twitter:image" content="https://nidakhanam.github.io/assets/og-image.png" />
+
+  <!-- Inline SVG favicon with initials -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23F8C8DC'/%3E%3Cstop offset='1' stop-color='%23B8E0C8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Verdana,sans-serif' font-weight='700' font-size='26' fill='%232E2A2B'%3ENK%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Apply saved / system theme before paint to avoid a flash -->
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("theme"); } catch (e) {}
+      if (!t) t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", t);
+      document.documentElement.classList.add("js");
+    })();
+  </script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Floating pastel blobs (decorative) -->
+  <div class="blobs" aria-hidden="true">
+    <span class="blob blob--pink"></span>
+    <span class="blob blob--green"></span>
+    <span class="blob blob--mix"></span>
+  </div>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a href="#top" class="nav__brand" aria-label="Nida Khanam, back to top">
+        <span class="nav__logo" aria-hidden="true">NK</span>
+        <span class="nav__name">nida<span class="accent-rose">.</span>dev</span>
+      </a>
+
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__links" id="nav-menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certs</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <button class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+        <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">☀︎</span>
+        <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">☾</span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero container" id="top" aria-labelledby="hero-title">
+      <div class="hero__text">
+        <p class="eyebrow"><span aria-hidden="true">✨</span> hello, world — I'm</p>
+        <h1 id="hero-title" class="hero__name">Nida Khanam</h1>
+        <p class="hero__title">Software Developer <span class="dot" aria-hidden="true">·</span> Backend &amp; GenAI</p>
+        <p class="hero__tagline">I build scalable backends and I'm now building <strong>AI agents that actually do things.</strong></p>
+
+        <div class="hero__actions">
+          <a href="#projects" class="btn btn--primary">View Projects</a>
+          <a href="assets/Nida_Khanam_Resume.pdf" class="btn btn--ghost" data-link="resume" download>
+            Download Resume
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M5 21h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <ul class="socials" aria-label="Social links">
+          <li>
+            <a href="https://github.com/nidakhanam" data-link="github" target="_blank" rel="noopener" aria-label="GitHub profile">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/nida-khanam-b4398920a/" data-link="linkedin" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:nidakhanzohra@gmail.com" data-link="email" aria-label="Send me an email">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h15A1.5 1.5 0 0 1 21 6.5v11a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 17.5v-11Zm0 .5 9 6 9-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Fake terminal window -->
+      <div class="terminal glass" role="img" aria-label="Terminal: whoami prints Nida Khanam, Software Developer. cat skills.txt prints Python, Django, GenAI, RAG, Agents, Kafka.">
+        <div class="terminal__bar" aria-hidden="true">
+          <span class="tdot tdot--pink"></span>
+          <span class="tdot tdot--cream"></span>
+          <span class="tdot tdot--green"></span>
+          <span class="terminal__title">~/nida — zsh</span>
+        </div>
+        <pre class="terminal__body" aria-hidden="true"><code id="terminal-output"></code><span class="cursor"></span></pre>
+        <span class="sparkle sparkle--1" aria-hidden="true">✦</span>
+        <span class="sparkle sparkle--2" aria-hidden="true">♡</span>
+        <span class="sparkle sparkle--3" aria-hidden="true">✧</span>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section container" id="about" aria-labelledby="about-title">
+      <h2 class="section__title reveal" id="about-title"><span class="section__num">01.</span> About me</h2>
+      <div class="about reveal">
+        <figure class="about__photo">
+          <img src="assets/nida-khanam.jpg" width="600" height="600" loading="lazy" decoding="async"
+               alt="Portrait of Nida Khanam wearing pink-framed glasses and a black top" />
+          <span class="about__photo-sparkle about__photo-sparkle--1" aria-hidden="true">✦</span>
+          <span class="about__photo-sparkle about__photo-sparkle--2" aria-hidden="true">♡</span>
+        </figure>
+        <div class="about__card glass">
+          <p>
+            I'm a <strong>Software Developer at Kyndryl</strong> (Aug 2023 – present), based in
+            <strong>Hyderabad, India</strong>. I build <strong>Python/Django backend services</strong>,
+            REST APIs, PostgreSQL data models, configuration-compliance workflows and
+            event-driven observability pipelines.
+          </p>
+          <p>
+            I'm hands-on with Docker, AWS/Azure, Kubernetes, CI/CD, Kafka, Elasticsearch and React —
+            and I'm currently going deep into <span class="hl">Generative AI, RAG and agentic AI systems</span>.
+          </p>
+        </div>
+        <ul class="about__facts">
+          <li class="fact glass"><span class="fact__icon" aria-hidden="true">💼</span><span><strong>Kyndryl</strong><br />Software Developer</span></li>
+          <li class="fact glass"><span class="fact__icon" aria-hidden="true">📍</span><span><strong>Hyderabad</strong><br />India</span></li>
+          <li class="fact glass"><span class="fact__icon" aria-hidden="true">🎓</span><span><strong>B.Tech, CSE</strong><br />Aditya University, AP</span></li>
+          <li class="fact glass"><span class="fact__icon" aria-hidden="true">🤖</span><span><strong>Now learning</strong><br />RAG &amp; AI agents</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section container" id="experience" aria-labelledby="exp-title">
+      <h2 class="section__title reveal" id="exp-title"><span class="section__num">02.</span> Experience</h2>
+
+      <ol class="timeline">
+        <li class="timeline__item reveal">
+          <span class="timeline__marker" aria-hidden="true"></span>
+          <article class="timeline__card glass">
+            <header class="timeline__head">
+              <div>
+                <h3>Software Developer <span class="at">@ Kyndryl</span></h3>
+                <p class="muted">Hyderabad, India</p>
+              </div>
+              <p class="pill pill--date"><time datetime="2023-08">08/2023</time> – Present</p>
+            </header>
+
+            <ul class="stats" aria-label="Key impact numbers">
+              <li class="stat"><span class="stat__num" data-count="35" data-suffix="%">35%</span><span class="stat__label">fewer policy violations</span></li>
+              <li class="stat"><span class="stat__num" data-count="500" data-suffix="+">500+</span><span class="stat__label">devices checked for drift</span></li>
+              <li class="stat"><span class="stat__num" data-count="40" data-suffix="%">40%</span><span class="stat__label">less manual review</span></li>
+              <li class="stat"><span class="stat__num" data-count="1" data-suffix="M+/day">1M+/day</span><span class="stat__label">log events processed</span></li>
+              <li class="stat"><span class="stat__num" data-count="50" data-suffix="%">50%</span><span class="stat__label">faster incident detection</span></li>
+            </ul>
+
+            <ul class="bullets">
+              <li>Built a <strong>Python/Django</strong> backend for a firewall and network-device compliance platform using <strong>PostgreSQL</strong>, validating security rules across 5 vendor platforms and reducing policy violations by <strong>35%</strong> across 10+ client accounts.</li>
+              <li>Designed and implemented <strong>REST APIs</strong> and backend services for automated configuration-drift detection across <strong>500+</strong> network devices, reducing manual review effort by <strong>40%</strong> and saving an estimated 15+ hours/week.</li>
+              <li>Developed reusable <strong>React</strong> components and <strong>RBAC</strong> features for the platform frontend, improving development velocity by 25% and supporting 100+ concurrent users.</li>
+              <li>Integrated backend services with <strong>NetBox</strong> as the single source of truth for 1,000+ device records, improving inventory data consistency by 30%.</li>
+              <li>Engineered <strong>Kafka + Elasticsearch + Kibana</strong> observability pipelines for <strong>1M+</strong> log events/day, reducing incident detection time by <strong>50%</strong> across 15+ client accounts.</li>
+            </ul>
+          </article>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section container" id="skills" aria-labelledby="skills-title">
+      <h2 class="section__title reveal" id="skills-title"><span class="section__num">03.</span> Skills</h2>
+
+      <div class="skills">
+        <article class="skill-card skill-card--featured glass reveal">
+          <span class="ribbon"><span aria-hidden="true">✨</span> currently focused on</span>
+          <h3>GenAI &amp; Agentic AI</h3>
+          <ul class="tags">
+            <li>LLMs</li><li>Prompt Engineering</li><li>RAG (Retrieval-Augmented Generation)</li>
+            <li>Embeddings &amp; Vector Databases</li><li>AI Agents &amp; Tool Calling</li><li>Multi-Agent Workflows</li>
+            <li>LangChain / LangGraph</li><li>MCP (Model Context Protocol)</li><li>LLM Evaluation &amp; Guardrails</li>
+            <li>OpenAI / Claude APIs</li>
+          </ul>
+        </article>
+
+        <article class="skill-card glass reveal">
+          <h3><span aria-hidden="true">🛠️</span> Backend</h3>
+          <ul class="tags"><li>Python</li><li>Django</li><li>Django REST Framework</li><li>FastAPI</li><li>REST APIs</li><li>Microservices</li></ul>
+        </article>
+
+        <article class="skill-card glass reveal">
+          <h3><span aria-hidden="true">🗄️</span> Databases</h3>
+          <ul class="tags"><li>PostgreSQL</li><li>MySQL</li><li>Redis</li></ul>
+        </article>
+
+        <article class="skill-card glass reveal">
+          <h3><span aria-hidden="true">☁️</span> Cloud &amp; DevOps</h3>
+          <ul class="tags"><li>AWS</li><li>Azure (VMs)</li><li>Docker</li><li>Kubernetes</li><li>CI/CD (GitHub Actions)</li><li>Git</li><li>Linux</li></ul>
+        </article>
+
+        <article class="skill-card glass reveal">
+          <h3><span aria-hidden="true">📈</span> Data &amp; Observability</h3>
+          <ul class="tags"><li>Kafka</li><li>Elasticsearch</li><li>Kibana</li></ul>
+        </article>
+
+        <article class="skill-card glass reveal">
+          <h3><span aria-hidden="true">🎨</span> Frontend</h3>
+          <ul class="tags"><li>React.js</li><li>Vite</li><li>HTML/CSS</li></ul>
+        </article>
+
+        <article class="skill-card glass reveal">
+          <h3><span aria-hidden="true">🧪</span> Testing &amp; Tools</h3>
+          <ul class="tags"><li>Pytest</li><li>Postman</li><li>Swagger/OpenAPI</li><li>NetBox</li><li>Agile/Scrum</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section container" id="projects" aria-labelledby="projects-title">
+      <h2 class="section__title reveal" id="projects-title"><span class="section__num">04.</span> Projects</h2>
+      <p class="section__lead reveal">Things I've built — from compliance backends to AI agents. <span aria-hidden="true">🌱</span></p>
+      <!-- Cards are rendered from the PROJECTS array in script.js -->
+      <div class="projects" id="projects-grid"></div>
+      <noscript><p class="muted">Enable JavaScript to see my projects, or visit my <a href="https://github.com/nidakhanam">GitHub</a>.</p></noscript>
+    </section>
+
+    <!-- ============ CERTIFICATIONS ============ -->
+    <section class="section container" id="certifications" aria-labelledby="certs-title">
+      <h2 class="section__title reveal" id="certs-title"><span class="section__num">05.</span> Certifications</h2>
+      <div class="certs">
+        <article class="cert glass reveal">
+          <span class="cert__badge cert__badge--azure" aria-hidden="true">AZ</span>
+          <div>
+            <h3>Azure Associate Network Engineer</h3>
+            <p class="muted mono">AZ-700 · Microsoft</p>
+          </div>
+        </article>
+        <article class="cert glass reveal">
+          <span class="cert__badge cert__badge--aws" aria-hidden="true">AWS</span>
+          <div>
+            <h3>AWS Associate Solutions Architect</h3>
+            <p class="muted mono">Solutions Architect – Associate · AWS</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section container" id="contact" aria-labelledby="contact-title">
+      <div class="contact glass reveal">
+        <h2 class="contact__title" id="contact-title">Let's build something smart <span class="soft">(and cute)</span> together <span aria-hidden="true">💌</span></h2>
+        <p class="muted">Open to backend &amp; GenAI roles, collaborations, or just a good tech chat.</p>
+        <a class="btn btn--primary btn--lg" href="mailto:nidakhanzohra@gmail.com" data-link="email">
+          <span class="mono">nidakhanzohra@gmail.com</span>
+        </a>
+        <ul class="contact__links">
+          <li><a href="https://github.com/nidakhanam" data-link="github" target="_blank" rel="noopener">GitHub ↗</a></li>
+          <li><a href="https://www.linkedin.com/in/nida-khanam-b4398920a/" data-link="linkedin" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Designed &amp; built by Nida Khanam with <span aria-label="green heart">💚</span> &amp; <span aria-label="pink heart">🩷</span> · © 2026</p>
+  </footer>
+</body>
+</html>
