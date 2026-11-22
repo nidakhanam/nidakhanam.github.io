@@ -5,12 +5,11 @@ const CONFIG = {
   GITHUB_URL: "https://github.com/nidakhanam",
   LINKEDIN_URL: "https://www.linkedin.com/in/nida-khanam-b4398920a/",
   EMAIL: "nidakhanzohra@gmail.com",
-  RESUME_PATH: "assets/Nida_Khanam_Resume.pdf", // put your PDF in /assets with this name
 
   // ⭐ Featured GenAI / Agentic AI project (shown first, as a large card)
   GENAI_PROJECT: {
-    name: "[PROJECT NAME — GenAI / Agentic AI project]",
-    description: "[ONE-LINE DESCRIPTION — e.g. An AI agent that answers questions over your docs and takes actions via tools.]",
+    name: "DocuMind",
+    description: "AI document assistant: upload PDFs and docs, and it retrieves the most relevant passages with RAG to answer questions with cited sources. An agent layer uses tools to summarize, compare and extract information across documents.",
     tech: ["Python", "FastAPI", "LangGraph", "RAG", "Vector DB", "LLM API", "Docker"],
     githubUrl: "#", // replace "#" with the repo link
     demoUrl: "#",   // replace "#" with a live demo link (or leave "#" to show "Demo soon")
@@ -92,7 +91,6 @@ function applyLinks() {
     github: CONFIG.GITHUB_URL,
     linkedin: CONFIG.LINKEDIN_URL,
     email: `mailto:${CONFIG.EMAIL}`,
-    resume: CONFIG.RESUME_PATH,
   };
   document.querySelectorAll("[data-link]").forEach((el) => {
     const url = map[el.dataset.link];

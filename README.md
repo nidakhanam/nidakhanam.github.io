@@ -10,20 +10,19 @@ Plain HTML + CSS + vanilla JS — no framework, no build step — so it runs on 
 ├── script.js       # CONFIG block (links) + PROJECTS array + animations
 ├── assets/
 │   ├── og-image.png                 # social preview image (1200×630)
-│   └── Nida_Khanam_Resume.pdf       # ← add your resume here
+│   └── nida-khanam.jpg              # profile photo (About section)
 ├── .nojekyll       # tells GitHub Pages to serve files as-is
 └── README.md
 ```
 
 ## ✏️ Customize
 
-- **Links** (GitHub, LinkedIn, email, resume path) and the **featured GenAI project** live in the `CONFIG` block at the top of `script.js`.
+- **Links** (GitHub, LinkedIn, email) and the **featured GenAI project (DocuMind)** live in the `CONFIG` block at the top of `script.js`.
 - **Add a project:** append an object to the `PROJECTS` array in `script.js`:
   ```js
   { title: "My App", description: "What it does.", tags: ["Python", "FastAPI"], github: "https://github.com/...", demo: "#" }
   ```
   Any link left as `"#"` shows as a disabled “Code soon” / “Demo soon” button.
-- **Resume:** drop your PDF at `assets/Nida_Khanam_Resume.pdf`.
 - **Colors / fonts:** edit the variables in `:root` (light) and `[data-theme="dark"]` in `styles.css`.
 - **Social preview URL:** if your site URL differs from `https://nidakhanam.github.io/`, update the `og:url`, `og:image` and `twitter:image` tags in `index.html`.
 
