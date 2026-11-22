@@ -75,6 +75,13 @@ const TERMINAL_LINES = [
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+/* ---------- A little hello for devs who open the console ---------- */
+console.log(
+  "%c✨ Hi, fellow dev! Thanks for peeking under the hood.%c\n心臓を捧げよ — dedicate your heart to what you build. 🫀",
+  "font: 600 14px/1.6 Quicksand, sans-serif; color: #C2577A;",
+  "font: 13px/1.6 'JetBrains Mono', monospace; color: #3F7D5C;"
+);
+
 document.addEventListener("DOMContentLoaded", () => {
   applyLinks();
   renderProjects();

@@ -507,6 +507,19 @@ ul, ol { padding: 0; margin: 0; list-style: none; }
 /* ---------- Footer ---------- */
 .footer { text-align: center; padding: 32px 16px 40px; font-size: 0.9rem; color: var(--text-muted); }
 .footer p { margin: 0; }
+.footer__motto { font-family: var(--font-mono); font-style: normal; font-size: 0.85em; color: var(--accent-green); }
+
+/* ---------- 404 ---------- */
+.notfound { min-height: 100svh; display: grid; place-items: center; padding: 32px 16px; }
+.notfound__card { width: min(100%, 560px); text-align: center; padding: 14px 14px 32px; }
+.notfound__term { border-radius: var(--r-md); }
+.notfound .terminal__body { text-align: left; min-height: 0; padding-bottom: 8px; }
+.notfound__code {
+  font-family: var(--font-display); font-weight: 700; font-size: clamp(4rem, 18vw, 6.5rem); line-height: 1;
+  margin: 28px 0 8px; background: var(--grad-text); -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.notfound h1 { font-size: clamp(1.3rem, 4.5vw, 1.7rem); padding-inline: 24px; }
+.notfound p { color: var(--text-muted); padding-inline: 24px; }
 
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
