@@ -9,29 +9,50 @@ const CONFIG = {
   // ⭐ Featured GenAI / Agentic AI project (shown first, as a large card)
   GENAI_PROJECT: {
     name: "DocuMind",
-    description: "AI document assistant: upload PDFs and docs, and it retrieves the most relevant passages with RAG to answer questions with cited sources. An agent layer uses tools to summarize, compare and extract information across documents.",
-    tech: ["Python", "FastAPI", "LangGraph", "RAG", "Vector DB", "LLM API", "Docker"],
-    githubUrl: "#", // replace "#" with the repo link
+    subtitle: "Agentic document intelligence: cited, verified answers from business PDFs",
+    description:
+      "Ask questions about invoices, contracts and policies (digital or scanned) and get answers with citations that are checked against the source. Invoices are extracted into validated structured data, and anything that doesn't add up is sent to a human for review. Built in 3 days as a deep dive into running a GenAI platform in production: RAG, LLM orchestration, guardrails, evaluation, tracing and incident analysis.",
+    metrics: [
+      { value: "19/20", label: "golden-set answers correct (baseline 18/20)" },
+      { value: "0.989", label: "RAGAS faithfulness" },
+      { value: "8/8", label: "exact-ID retrieval (vector-only 6/8)" },
+      { value: "9", label: "failures injected, debugged & written up as RCAs" },
+      { value: "49", label: "automated tests" },
+    ],
+    highlights: [
+      "<strong>Agentic RAG in LangGraph:</strong> rewrites the query, grades retrieved chunks, then answers with citations or an honest \"not found\". Query rewriting fixed the contract-amendment question that basic RAG missed.",
+      "<strong>Hybrid retrieval:</strong> BM25 + vector search merged with Reciprocal Rank Fusion, plus ID-aware pinning so look-alike IDs (PO-77901 vs PO-77902) never get blurred together.",
+      "<strong>Invoice extraction with human-in-the-loop:</strong> Pydantic schemas, arithmetic checked in Python (not by the LLM), retries with feedback, and LangGraph interrupts for approve / edit / reject.",
+      "<strong>Guardrails:</strong> Presidio PII masking, prompt-injection quarantine at ingestion (blocked a hidden white-text PDF attack) and number + LLM-judge grounding checks.",
+      "<strong>Smart ingestion:</strong> each page routed to its text layer or to OCR (Gemini vision, Tesseract baseline) using a text-quality score that catches junk scanner text.",
+      "<strong>Built to be operated:</strong> one LLM gateway with retry, backoff and model fallback; per-request JSON tracing (+ Langfuse); FastAPI with safe uploads and request IDs; a Streamlit UI with a review queue.",
+    ],
+    tech: ["Python", "LangGraph", "LangChain", "Gemini", "ChromaDB", "BM25 + RRF", "FastAPI", "Streamlit", "Pydantic", "Presidio", "RAGAS", "Langfuse", "PyMuPDF", "Tesseract", "Pytest"],
+    githubUrl: "#", // the repo is private: make it public, then paste "https://github.com/nidakhanam/documind"
     demoUrl: "#",   // replace "#" with a live demo link (or leave "#" to show "Demo soon")
-    inProgress: true, // set to false when it's done to hide the "🚧 In progress" badge
+    inProgress: false, // true shows a "🚧 In progress" badge
   },
 };
 
 /* ==========================================================================
    📦  PROJECTS — add a new object to this array to add a project card.
-   Fields: title, description, tags[], github, demo, featured?, badges?, flow?
+   Fields: title, description, tags[], github, demo,
+           optional: featured, subtitle, badges[], metrics[{value,label}], highlights[] (HTML), flow[]
    Links set to "#" are shown as a disabled "coming soon" button.
    ========================================================================== */
 const PROJECTS = [
   {
     title: CONFIG.GENAI_PROJECT.name,
+    subtitle: CONFIG.GENAI_PROJECT.subtitle,
     description: CONFIG.GENAI_PROJECT.description,
+    metrics: CONFIG.GENAI_PROJECT.metrics,
+    highlights: CONFIG.GENAI_PROJECT.highlights,
     tags: CONFIG.GENAI_PROJECT.tech,
     github: CONFIG.GENAI_PROJECT.githubUrl,
     demo: CONFIG.GENAI_PROJECT.demoUrl,
     featured: true,
-    badges: ["⭐ Featured", ...(CONFIG.GENAI_PROJECT.inProgress ? ["🚧 In progress"] : [])],
-    flow: ["👩‍💻 User", "🤖 Agent", "🧰 Tools / RAG retrieval", "🧠 LLM", "💬 Response"],
+    badges: ["⭐ Featured", "🧠 GenAI", ...(CONFIG.GENAI_PROJECT.inProgress ? ["🚧 In progress"] : [])],
+    flow: ["📄 PDF upload", "🔎 Text layer / OCR", "🧩 Chunk + embed", "🔀 Hybrid retrieval", "🤖 LangGraph agent", "🛡️ Guardrails + grounding", "💬 Cited answer / 👀 Human review"],
   },
   {
     title: "Task & Inventory Tracker",
@@ -151,9 +172,46 @@ function renderProjects() {
     h3.textContent = p.title;
     card.appendChild(h3);
 
+    if (p.subtitle) {
+      const sub = document.createElement("p");
+      sub.className = "project__subtitle";
+      sub.textContent = p.subtitle;
+      card.appendChild(sub);
+    }
+
     const desc = document.createElement("p");
     desc.textContent = p.description;
     card.appendChild(desc);
+
+    if (p.metrics && p.metrics.length) {
+      const stats = document.createElement("ul");
+      stats.className = "stats project__stats";
+      stats.setAttribute("aria-label", "Results");
+      p.metrics.forEach((m) => {
+        const li = document.createElement("li");
+        li.className = "stat";
+        const num = document.createElement("span");
+        num.className = "stat__num";
+        num.textContent = m.value;
+        const label = document.createElement("span");
+        label.className = "stat__label";
+        label.textContent = m.label;
+        li.append(num, label);
+        stats.appendChild(li);
+      });
+      card.appendChild(stats);
+    }
+
+    if (p.highlights && p.highlights.length) {
+      const ul = document.createElement("ul");
+      ul.className = "bullets project__highlights";
+      p.highlights.forEach((h) => {
+        const li = document.createElement("li");
+        li.innerHTML = h; // trusted, hand-written content from this file
+        ul.appendChild(li);
+      });
+      card.appendChild(ul);
+    }
 
     if (p.flow && p.flow.length) {
       const flow = document.createElement("figure");

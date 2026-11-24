@@ -457,7 +457,16 @@ ul, ol { padding: 0; margin: 0; list-style: none; }
     linear-gradient(135deg, var(--baby-pink), var(--sage)) border-box;
   border: 2px solid transparent;
 }
-.project--featured h3 { font-size: clamp(1.4rem, 4vw, 1.8rem); }
+.project--featured h3 { font-size: clamp(1.4rem, 4vw, 1.8rem); margin-bottom: 0.2em; }
+.project__subtitle { font-family: var(--font-mono); font-size: 0.88rem; color: var(--accent-green) !important; margin-bottom: 0.9em; flex-grow: 0 !important; }
+.project--featured > p { flex-grow: 0; max-width: 75ch; }
+.project__stats { margin: 4px 0 20px; }
+.project__stats .stat { flex: 1 1 140px; }
+.project__highlights { margin-bottom: 18px; color: var(--text); }
+.project__highlights li { font-size: 0.95rem; }
+@media (min-width: 900px) {
+  .project__highlights { display: grid; grid-template-columns: 1fr 1fr; column-gap: 28px; }
+}
 
 /* "How it works" diagram */
 .flow { margin: 4px 0 22px; }
